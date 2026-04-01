@@ -3,83 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzeria Fortuna | Napoli</title>
+    <title>Pizzeria Fortuna | Napoli Excellence</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">FORTUNA<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#storia">Storia</a></li>
-            <li><a href="#menu">Menù</a></li>
-            <li><a href="#contatti">Contatti</a></li>
-        </ul>
-        <a href="tel:+39081000000" class="btn-call-nav">CHIAMA ORA</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#storia">Storia</a></li>
+                <li><a href="#specialita">Specialità</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+            <a href="tel:+39081000000" class="btn-nav">CHIAMA ORA</a>
+        </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <span class="badge">Autentica Tradizione Napoletana</span>
-            <h1>La vera pizza,<br><span class="outline">senza compromessi.</span></h1>
+            <div class="reveal-text">Dal 1994 a Napoli Centrale</div>
+            <h1>L'Essenza della Pizza.<br><span class="glitch">Pura. Vera.</span></h1>
             <div class="hero-btns">
-                <a href="#menu" class="btn-gold">SCOPRI IL MENÙ</a>
-                <a href="#storia" class="btn-outline">LA NOSTRA STORIA</a>
+                <a href="#specialita" class="btn-main">IL NOSTRO ORO</a>
+                <a href="#storia" class="btn-ghost">LA STORIA</a>
+            </div>
+        </div>
+        <div class="scroll-down"></div>
+    </section>
+
+    <section id="specialita" class="spec-section">
+        <div class="spec-container">
+            <div class="spec-img">
+                <img src="https://images.unsplash.com/photo-1628191139360-4083564d03fd?q=80&w=1000&auto=format&fit=crop" alt="Frittatina">
+            </div>
+            <div class="spec-text">
+                <span class="tag">IL MUST</span>
+                <h2>Frittatina<br>di Pasta</h2>
+                <p>Non è un antipasto, è un'icona. Cuore di besciamella setosa, carne scelta e piselli, avvolti in una doratura croccante che sfida i sensi.</p>
+                <div class="price-tag">Solo €2.50</div>
             </div>
         </div>
     </section>
 
-    <section id="specialita" class="specialita">
-        <div class="spec-card">
-            <div class="spec-content">
-                <span>Must Try</span>
-                <h2>Frittatina di Pasta</h2>
-                <p>Bucatini, besciamella setosa, carne macinata e piselli. Un'esplosione di Napoli in un morso.</p>
-            </div>
-            <img src="https://images.unsplash.com/photo-1628191139360-4083564d03fd?q=80&w=1000&auto=format&fit=crop" alt="Frittatine di Pasta Dorate Autentiche">
-        </div>
-    </section>
-
-    <section id="storia" class="section">
+    <section id="storia" class="story-section">
         <div class="container">
-            <div class="grid">
-                <div>
-                    <h2 class="title">Anima di Napoli.</h2>
-                    <p>Situata a pochi passi dalla Stazione Garibaldi, Pizzeria Fortuna è il punto d'incontro tra il caos vibrante della città e l'arte millenaria della pizza. Materie prime d'eccellenza e cuore partenopeo.</p>
+            <div class="story-wrapper">
+                <div class="story-info">
+                    <h2 class="section-title">Oltre la Stazione,<br>dentro il Mito.</h2>
+                    <p>Pizzeria Fortuna nasce dove Napoli pulsa più forte. A pochi passi dai binari di Garibaldi, offriamo rifugio a chi cerca il sapore vero, quello che non ha bisogno di fronzoli per brillare.</p>
                 </div>
-                <div class="image-box">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" alt="Pizza">
+                <div class="story-visual">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" alt="Napoli">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contatti" class="section-contacts">
+    <section id="contatti" class="contact-section">
         <div class="container">
-            <div class="contact-card">
-                <div class="contact-info">
-                    <h2 class="title">Vieni a trovarci</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> Via Napoli Centrale, 12 - Napoli</p>
-                    <p><i class="fas fa-clock"></i> 11:00 - 00:00 (Tutti i giorni)</p>
-                    <div class="socials">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <h2 class="section-title">Trovaci</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-pin"></i>
+                        <span>Via Napoli Centrale, 12, Napoli</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Sempre Aperti: 11:00 - 00:00</span>
+                    </div>
+                    <div class="social-box">
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/39081000000" class="wa-icon"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    <a href="https://wa.me/390000000" class="btn-whatsapp">PRENOTA SU WHATSAPP</a>
                 </div>
-                <div class="contact-map">
-                    <div class="map-box">
-                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Piazza+Garibaldi,Napoli,IT&zoom=15&size=600x400&maptype=roadmap&markers=color:red%7Clabel:F%7CPiazza+Garibaldi,Napoli,IT&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:geometry.stroke%7Ccolor:0x000000&style=feature:administrative.province%7Celement:geometry.stroke%7Ccolor:0x000000&style=feature:landscape%7Celement:geometry%7Ccolor:0x1e1e1e&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0xcccccc&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:road%7Celement:geometry%7Ccolor:0x2c2c2c&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&key=AIzaSyA_TUACaricaAPIKey" alt="Mappa Pizzeria Fortuna">
-                    </div>
+                <div class="contact-map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.351234567!2d14.268!3d40.852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084b!2sNapoli%20Centrale!5e0!3m2!1sit!2sit!4v123456789" 
+                        class="google-map" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Pizzeria Fortuna Napoli.</p>
+        <div class="footer-line"></div>
+        <p>© 2024 Pizzeria Fortuna. Designed for the Neapolitan Soul.</p>
     </footer>
 
 </body>
