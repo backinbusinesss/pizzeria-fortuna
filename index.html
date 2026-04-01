@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Fortuna | L'Eccellenza del Gusto Partenopeo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FORTUNA<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#storia">Storia</a></li>
+            <li><a href="#menu">Menù</a></li>
+            <li><a href="#specialita">Specialità</a></li>
+            <li><a href="#contatti">Dove siamo</a></li>
+        </ul>
+        <a href="tel:+39081000000" class="cta-nav">Chiama Ora</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Dal cuore di Napoli</span>
+            <h1>La vera pizza napoletana,<br><span class="accent">senza compromessi.</span></h1>
+            <p>Street food d'autore a due passi dalla Stazione Garibaldi. L'autenticità che non accetta scorciatoie.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn-primary">Scopri il Menù</a>
+                <a href="#storia" class="btn-secondary">La nostra storia</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section id="storia" class="section story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-text">
+                    <h2 class="section-title">Anima Popolare,<br>Qualità d'Elite.</h2>
+                    <p>Pizzeria Fortuna non è solo un nome, è un rito. Nati tra i vicoli della Stazione Centrale, portiamo in tavola l'energia vibrante di Napoli. Usiamo solo farina macinata a pietra, pomodoro San Marzano DOP e un'idratazione che rende l'impasto una nuvola.</p>
+                    <p class="quote">"La pizza a Napoli è un diritto, farla bene è un dovere."</p>
+                </div>
+                <div class="story-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?q=80&w=1000&auto=format&fit=crop" alt="Forno a legna">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title center">Il Nostro Manifesto</h2>
+                <div class="menu-tabs">
+                    <button class="tab-btn active" onclick="filterMenu('classiche')">Le Classiche</button>
+                    <button class="tab-btn" onclick="filterMenu('fritte')">L'Oro di Napoli</button>
+                    <button class="tab-btn" onclick="filterMenu('street')">Street Food</button>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menu-container">
+                <div class="menu-item" data-category="classiche">
+                    <div class="item-info">
+                        <h3>Margherita Verace</h3>
+                        <p>Pomodoro S. Marzano, Mozzarella di Bufala, Basilico, Olio EVO.</p>
+                    </div>
+                    <span class="price">€6.50</span>
+                </div>
+                <div class="menu-item" data-category="fritte">
+                    <div class="item-info">
+                        <h3>La Completa (Fritta)</h3>
+                        <p>Ricotta di bufala, ciccioli, provola affumicata e pepe.</p>
+                    </div>
+                    <span class="price">€7.00</span>
+                </div>
+                <div class="menu-item" data-category="street">
+                    <div class="item-info">
+                        <h3>Pizza a Portafoglio</h3>
+                        <p>La tradizione da passeggio. Piccola, calda, iconica.</p>
+                    </div>
+                    <span class="price">€2.50</span>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="specialita" class="specialita">
+        <div class="spec-card">
+            <div class="spec-content">
+                <span>Must Try</span>
+                <h2>Frittatina di Pasta</h2>
+                <p>Bucatini, besciamella setosa, carne macinata e piselli. Un'esplosione di Napoli in un morso.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1628191139360-4083564d03fd?q=80&w=1000&auto=format&fit=crop" alt="Street Food">
+        </div>
+    </section>
+
+    <section id="contatti" class="section location">
+        <div class="container">
+            <div class="location-box">
+                <div class="info">
+                    <h2>Vieni a trovarci</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> Via Napoli Centrale, 12 - Napoli</p>
+                    <p><i class="fas fa-clock"></i> Aperto tutti i giorni: 11:00 - 00:00</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <a href="https://wa.me/390000000" class="btn-whatsapp">Prenota d'asporto via WhatsApp</a>
+                </div>
+                <div class="map-placeholder">
+                    <div class="fake-map">
+                        <span>MAP INTERACTIVE GRID</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pizzeria Fortuna Napoli. Est. 1994. <br> <span>Designed for Excellence.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
