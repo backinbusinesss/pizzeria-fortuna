@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzeria Fortuna | Napoli Excellence</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="#" class="logo">FORTUNA<span>.</span></a>
-        <div class="nav-right">
-            <ul class="nav-links">
+        <div class="nav-container">
+            <a href="#" class="logo">FORTUNA<span>.</span></a>
+            
+            <ul class="nav-links centered">
                 <li><a href="#specialita">Specialità</a></li>
+                <li><a href="#menu">Il Menù</a></li>
                 <li><a href="#storia">La Storia</a></li>
                 <li><a href="#contatti">Dove Siamo</a></li>
             </ul>
-            <a href="tel:+39081000000" class="btn-call">CHIAMA ORA</a>
+            
+            <div class="nav-right">
+                <a href="tel:+39081000000" class="btn-call">CHIAMA ORA</a>
+            </div>
         </div>
     </nav>
 
@@ -28,30 +33,79 @@
             <p class="hero-tag">Dal 1994 a Napoli Centrale</p>
             <h1>L'ARTE DELLA <br><span class="gold-text">VERA PIZZA</span></h1>
             <div class="hero-btns">
-                <a href="#specialita" class="btn-primary">VEDI IL MENÙ</a>
+                <a href="#menu" class="btn-primary">VEDI IL MENÙ</a>
                 <a href="#storia" class="btn-secondary">LA NOSTRA STORIA</a>
             </div>
         </div>
         <div class="mouse-scroll"></div>
     </section>
 
-    <section id="specialita" class="spec-section">
+    <section id="specialita" class="spec-section reveal">
         <div class="container">
             <div class="spec-card">
                 <div class="spec-img">
-                    <img src="https://images.unsplash.com/photo-1628191139360-4083564d03fd?q=80&w=1200" alt="Frittatina Napoletana">
+                    <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?q=80&w=1200&auto=format&fit=crop" alt="Pizzaiolo lavora l'impasto">
                 </div>
                 <div class="spec-info">
-                    <span class="mini-title">La nostra icona</span>
-                    <h2>Frittatina di Pasta</h2>
-                    <p>Bucatini trafilati al bronzo, besciamella artigianale, pepe nero e un cuore di carne scelta. La leggenda di Napoli in un solo morso croccante.</p>
-                    <div class="price">€ 2,50</div>
+                    <span class="mini-title">La nostra essenza</span>
+                    <h2>Margherita Verace</h2>
+                    <p>Pomodoro San Marzano DOP, Mozzarella di Bufala Campana DOP, basilico fresco e olio EVO monocultivar. La perfezione assoluta, senza compromessi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="storia" class="story-section">
+    <section id="menu" class="menu-section reveal">
+        <div class="container">
+            <h2 class="title-gold center">Il Manifesto del Gusto</h2>
+            <div class="menu-grid">
+                <div class="menu-item-card">
+                    <div class="item-header">
+                        <h3>Margherita Verace</h3>
+                        <span class="price">€ 8,50</span>
+                    </div>
+                    <p>Pomodoro S. Marzano DOP, Bufala DOP, Basilico, Olio EVO.</p>
+                </div>
+                <div class="menu-item-card">
+                    <div class="item-header">
+                        <h3>Marinara Antica</h3>
+                        <span class="price">€ 6,00</span>
+                    </div>
+                    <p>Pomodoro S. Marzano DOP, Aglio dell'Ufita, Origano, Basilico.</p>
+                </div>
+                <div class="menu-item-card">
+                    <div class="item-header">
+                        <h3>Cosacca</h3>
+                        <span class="price">€ 7,00</span>
+                    </div>
+                    <p>Pomodoro S. Marzano DOP, Pecorino Romano DOP grattugiato, Basilico.</p>
+                </div>
+                <div class="menu-item-card">
+                    <div class="item-header">
+                        <h3>Provola e Pepe</h3>
+                        <span class="price">€ 9,00</span>
+                    </div>
+                    <p>Provola affumicata di Agerola, Pomodoro S. Marzano DOP, Pepe nero.</p>
+                </div>
+                <div class="menu-item-card street-food">
+                    <div class="item-header">
+                        <h3>Frittatina di Pasta</h3>
+                        <span class="price">€ 2,50</span>
+                    </div>
+                    <p>Bucatini artigianali, besciamella setosa, carne scelta, piselli.</p>
+                </div>
+                <div class="menu-item-card street-food">
+                    <div class="item-header">
+                        <h3>Arancino Rosso</h3>
+                        <span class="price">€ 2,50</span>
+                    </div>
+                    <p>Riso Carnaroli, ragù napoletano, cuore di provola filante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="storia" class="story-section reveal">
         <div class="container">
             <div class="story-grid">
                 <div class="story-content">
@@ -65,7 +119,7 @@
         </div>
     </section>
 
-    <section id="contatti" class="contact-section">
+    <section id="contatti" class="contact-section reveal">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-data">
@@ -83,7 +137,7 @@
                 </div>
                 <div class="map-container">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.2831818290374!2d14.2681!3d40.8524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b08197777087f%3A0x1d4d1e2e6d6e6e6e!2sNapoli%20Centrale!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" 
+                        src="http://googleusercontent.com/maps.google.com/4" 
                         allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
