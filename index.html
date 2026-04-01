@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzeria Fortuna | Napoli Centrale</title>
+    <title>Pizzeria Fortuna | Napoli Centrale Excellence</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
@@ -14,66 +14,87 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">FORTUNA<span>.</span></a>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#specialita">Specialità</a></li>
-                    <li><a href="#storia">Storia</a></li>
-                    <li><a href="#contatti">Dove Siamo</a></li>
-                </ul>
-                <a href="tel:+390811234567" class="btn-call-fix">CHIAMA ORA</a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#specialita">Specialità</a></li>
+                <li><a href="#storia">Storia</a></li>
+                <li><a href="#contatti">Dove Siamo</a></li>
+            </ul>
+            <a href="tel:+390811234567" class="btn-call-gold">CHIAMA ORA</a>
         </div>
     </nav>
 
     <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="hero-tag">Dal 1994 a Napoli Centrale</p>
-            <h1>L'Essenza della Pizza.<br><span class="outline">Pura. Vera.</span></h1>
+            <h1><span class="reveal-text">L'Essenza della Pizza.</span><br><span class="outline-text">Pura. Vera.</span></h1>
             <div class="hero-btns">
-                <a href="#specialita" class="btn-primary">IL NOSTRO ORO</a>
+                <a href="#specialita" class="btn-main">IL NOSTRO ORO</a>
             </div>
         </div>
     </section>
 
-    <section id="specialita" class="spec-section">
-        <div class="spec-card">
+    <section id="specialita" class="spec-section reveal">
+        <div class="spec-container">
             <div class="spec-img">
-                <img src="image_bb34f1.png" alt="Specialità">
+                <img src="assets/img/frittatina-dorata.png" alt="Frittatina di Pasta Dorata Napoli">
             </div>
-            <div class="spec-info">
-                <span class="mini-tag">IL MUST</span>
-                <h2>Frittatina di Pasta</h2>
-                <p>Bucatini artigianali, besciamella setosa, carne macinata e piselli. Un'esplosione di Napoli in un morso.</p>
+            <div class="spec-text">
+                <span class="tag">IL MUST</span>
+                <h2>Frittatina<br>di Pasta</h2>
+                <p>Bucatini artigianali, besciamella setosa, carne scelta e piselli. Avvolti in una doratura croccante che sfida i sensi.</p>
+                <div class="price-tag">€ 2.50</div>
             </div>
         </div>
     </section>
 
-    <section id="contatti" class="contact-section">
+    <section id="storia" class="story-section reveal">
+        <div class="container">
+            <div class="story-wrapper">
+                <div class="story-info">
+                    <h2 class="section-title">Oltre la Stazione,<br>dentro il Mito.</h2>
+                    <p>Pizzeria Fortuna nasce dove Napoli pulsa più forte. A pochi passi dai binari di Garibaldi, offriamo rifugio a chi cerca il sapore vero.</p>
+                </div>
+                <div class="story-visual">
+                    <img src="assets/img/napoli-centrale-bg.jpg" alt="Napoli Centrale Street">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="contact-section reveal">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-text">
-                    <h2 class="title-lux">Ti aspettiamo</h2>
-                    <div class="info-row"><i class="fas fa-map-marker-alt"></i> Via Napoli Centrale, 12</div>
-                    <div class="info-row"><i class="fas fa-clock"></i> 11:00 - 00:00</div>
-                    <div class="info-row"><i class="fas fa-phone"></i> +39 081 123 4567</div>
-                    
-                    <div class="social-wrapper">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                        <a href="#" class="btn-wa">PRENOTA VIA WA</a>
+                <div class="contact-data">
+                    <h2 class="section-title">Ti aspettiamo</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-pin"></i>
+                        <span>Via Napoli Centrale, 12, Napoli</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Sempre Aperti: 11:00 - 00:00</span>
+                    </div>
+                    <div class="social-row">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/390811234567" class="btn-whatsapp">PRENOTA VIA WA</a>
                     </div>
                 </div>
-                <div class="map-placeholder">
-                    <span>MAP INTERACTIVE GRID</span>
+                <div class="contact-map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m3!1d1509.3473180429!2d14.268120615412!3d40.85179457931674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084610b7b1e1%3A0x6d116238b9e6f8a8!2sStazione%20di%20Napoli%20Centrale!5e0!3m2!1sit!2sit!4v1625123456789!5m2!1sit!2sit" 
+                        class="google-map" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Pizzeria Fortuna Napoli. Est. 1994. <br><span>Designed for Excellence.</span></p>
+        <p>© 2024 PIZZERIA FORTUNA. NAPOLI CALIBRO 9. <span>DESIGNED FOR EXCELLENCE</span></p>
     </footer>
 
     <script src="script.js"></script>
