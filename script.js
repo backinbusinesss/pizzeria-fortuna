@@ -1,44 +1,48 @@
 /**
- * PIZZERIA FORTUNA - Script per Animazioni ScrollReveal e UX Premium
+ * PIZZERIA FORTUNA - Script per UX Premium e Animazioni High-End
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Configurazione base per ScrollReveal (Animazioni al caricamento/scorrimento)
+    // Configurazione base per ScrollReveal (Animazioni fluide)
     const sr = ScrollReveal({
         origin: 'bottom',
         distance: '40px',
-        duration: 1000,
+        duration: 1200, // Più lento per un effetto Michelin
         delay: 200,
-        easing: 'cubic-bezier(0.23, 1, 0.32, 1)',
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)', // Easing ultra-fluido (Apple style)
         reset: false // Cambia a 'true' se vuoi che l'animazione si ripeta
     });
 
-    // Applicazione animazioni alle sezioni principali
+    // --- ANIMAZIONI HERO (Caricamento immediato) ---
+    sr.reveal('.hero-tag', { delay: 300, origin: 'top' });
+    sr.reveal('.hero h1', { delay: 500, distance: '60px' });
+    sr.reveal('.hero-btns', { delay: 800, scale: 0.9, distance: '0px' });
+
+    // --- ANIMAZIONI SEZIONI SCROLL (Michelin Quality) ---
     
-    // 1. Hero
-    sr.reveal('.hero-tag', { delay: 300 });
-    sr.reveal('.hero h1', { delay: 500 });
-    sr.reveal('.hero-btns', { delay: 700 });
+    // 1. Specialità
+    sr.reveal('.spec-container', { delay: 200 });
+    sr.reveal('.spec-img', { delay: 300, origin: 'left', distance: '100px' });
+    sr.reveal('.spec-text h2', { delay: 500, distance: '20px' });
+    sr.reveal('.spec-text p', { delay: 600, distance: '20px' });
+    sr.reveal('.price-tag', { delay: 700, origin: 'top', distance: '10px' });
 
-    // 2. Specialità
-    sr.reveal('.spec-container', { delay: 300 });
-    sr.reveal('.spec-img', { delay: 400, origin: 'left' });
-    sr.reveal('.spec-text', { delay: 600, origin: 'right' });
-
-    // 3. Storia
-    sr.reveal('.section-title', { delay: 300 });
+    // 2. Storia
+    sr.reveal('.story-section .section-title', { delay: 200, origin: 'left' });
     sr.reveal('.story-info p', { delay: 400, interval: 100 });
-    sr.reveal('.story-visual', { delay: 600, origin: 'right', scale: 0.9 });
+    sr.reveal('.story-visual', { delay: 600, scale: 0.8, distance: '0px' });
 
-    // 4. Contatti
-    sr.reveal('.contact-grid', { delay: 300 });
-    sr.reveal('.contact-details', { delay: 400, origin: 'left' });
-    sr.reveal('.contact-map-wrapper', { delay: 600, origin: 'right' });
+    // 3. Contatti
+    sr.reveal('.contact-section .section-title', { delay: 200 });
+    sr.reveal('.info-item', { delay: 300, interval: 100, origin: 'left' });
+    sr.reveal('.social-links a', { delay: 600, interval: 100, scale: 0.5, distance: '0px' });
+    sr.reveal('.btn-whatsapp', { delay: 900, origin: 'right', distance: '50px' });
+    sr.reveal('.contact-map-wrapper', { delay: 400, scale: 0.9, distance: '0px' });
 
-    // --- LOGICA AGGIUNTIVA ---
+    // --- EFFETTI AGGIUNTIVI ---
 
-    // Navbar Scroll Effect (Opacità al cambio scroll)
+    // Navbar Scroll Effect (Opacità)
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (navbar) {
@@ -50,20 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 navbar.style.boxShadow = 'none';
             }
         }
-    });
-
-    // Smooth Scroll per i link della navigazione
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
     });
 
 });
