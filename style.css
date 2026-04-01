@@ -5,6 +5,7 @@
     --red: #E63946;
     --white: #FFFFFF;
     --gray: #A0A0A0;
+    --shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -90,15 +91,59 @@ body {
 .outline { color: transparent; -webkit-text-stroke: 1px var(--white); }
 .badge { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; }
 
-/* SEZIONI */
+/* SEZIONI GENERALI */
 .section { padding: 100px 5%; }
 .container { max-width: 1100px; margin: auto; }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 .title { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; color: var(--gold); }
+.title-gold.center { text-align: center; color: var(--gold); font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 50px; }
 .image-box img { width: 100%; border-radius: 8px; }
 
+/* SPECIALITÀ BANNER (RISOLTO IMMAGINE E SPAZI) */
+.specialita { padding: 0 5%; margin: 80px 0; }
+.spec-card {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background: var(--gold);
+    border-radius: 12px;
+    overflow: hidden;
+    color: black;
+}
+
+.spec-content { padding: 50px; }
+.spec-content h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 15px; color: black; }
+.spec-card img { width: 100%; height: 100%; object-fit: cover; }
+
+/* GALLERY (RISOLTO SPAZIO VUOTO) */
+.gallery { padding: 80px 5%; }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #222;
+    transition: 0.3s;
+}
+.gallery-item:hover { transform: scale(1.03); border-color: var(--gold); }
+.gallery-item img { width: 100%; height: 250px; object-fit: cover; }
+
+/* TESTIMONIALS (RISOLTO SPAZIO VUOTO) */
+.testimonials { padding: 80px 5%; background: #0a0a0a; }
+.test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.test-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+.test-card p { font-style: italic; color: var(--white); font-size: 1.1rem; }
+.test-card span { display: block; margin-top: 15px; color: var(--gold); font-weight: 700; }
+
 /* CONTATTI (RISOLTI) */
-.section-contacts { padding: 80px 5%; background: #0a0a0a; }
+.section-contacts { padding: 80px 5%; }
 .contact-card {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -133,7 +178,7 @@ footer { text-align: center; padding: 40px; border-top: 1px solid #222; font-siz
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .grid, .contact-card { grid-template-columns: 1fr; }
+    .grid, .contact-card, .spec-card { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.5rem; }
     .btn-outline { margin-left: 0; margin-top: 10px; width: 100%; }
     .btn-gold { width: 100%; }
