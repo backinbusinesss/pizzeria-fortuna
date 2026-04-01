@@ -1,348 +1,141 @@
-/* PIZZERIA FORTUNA - OFFICIAL STYLE SHEET
-    Design System: Dark Premium / Napoli Street
-*/
-
 :root {
-    --bg-dark: #0a0a0a;
-    --bg-accent: #141414;
-    --gold: #c5a059;
-    --gold-hover: #e0bc7a;
-    --red-pizza: #e63946;
-    --white: #ffffff;
-    --text-light: #f5f5f5;
-    --text-muted: #a0a0a0;
-    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --bg: #050505;
+    --card-bg: #121212;
+    --gold: #D4AF37;
+    --red: #E63946;
+    --white: #FFFFFF;
+    --gray: #A0A0A0;
 }
 
-/* RESET & BASE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: var(--bg);
+    color: var(--white);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
 }
 
 /* NAVBAR */
 .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 1.5rem 5%;
+    top: 0; width: 100%;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(5, 5, 5, 0.95);
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    transition: var(--transition);
+    border-bottom: 1px solid #222;
 }
 
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--white);
-    text-decoration: none;
-}
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; }
+.logo span { color: var(--red); }
 
-.logo span { color: var(--red-pizza); }
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    transition: var(--transition);
-}
-
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--gray); font-size: 0.8rem; font-weight: 600; transition: 0.3s; }
 .nav-links a:hover { color: var(--gold); }
 
-/* PULSANTI UNIVERSALI (FIX BLUE) */
-.btn-primary, .btn-secondary, .btn-whatsapp, .cta-nav {
-    display: inline-block;
-    padding: 1rem 2.2rem;
+/* PULSANTI MIGLIORATI */
+.btn-call-nav {
+    background: var(--red);
+    color: white;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-/* Bottone Menu - Oro */
-.btn-primary {
-    background: var(--gold);
-    color: var(--bg-dark);
-    margin-right: 1rem;
-}
-
-.btn-primary:hover {
-    background: var(--gold-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
-}
-
-/* Bottone Storia - Ghost Gold */
-.btn-secondary {
-    background: transparent;
-    border: 2px solid var(--gold);
-    color: var(--gold);
-}
-
-.btn-secondary:hover {
-    background: rgba(197, 160, 89, 0.1);
-    transform: translateY(-3px);
-}
-
-/* Bottone Navigazione - Rosso */
-.cta-nav {
-    background: var(--red-pizza);
-    color: white;
-    padding: 0.7rem 1.5rem;
+    padding: 10px 20px;
+    border-radius: 4px;
     font-size: 0.75rem;
+    font-weight: 800;
+    transition: 0.3s;
 }
 
-.cta-nav:hover {
-    background: #ff4d5a;
-    transform: translateY(-2px);
+.btn-gold {
+    background: var(--gold);
+    color: black;
+    text-decoration: none;
+    padding: 18px 35px;
+    border-radius: 2px;
+    font-weight: 800;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-/* Bottone WhatsApp */
-.btn-whatsapp {
-    background: #25D366;
-    color: white;
-    margin-top: 2rem;
+.btn-outline {
+    background: transparent;
+    color: var(--gold);
+    text-decoration: none;
+    padding: 16px 33px;
+    border: 2px solid var(--gold);
+    border-radius: 2px;
+    font-weight: 800;
+    display: inline-block;
+    margin-left: 15px;
+    transition: 0.3s;
 }
 
-.btn-whatsapp:hover {
-    background: #1eb954;
-    transform: scale(1.05);
-}
+.btn-gold:hover, .btn-outline:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop') center/cover;
-    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
 }
 
-.hero-content {
-    max-width: 900px;
-    z-index: 10;
-}
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 20px 0; }
+.outline { color: transparent; -webkit-text-stroke: 1px var(--white); }
+.badge { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; }
 
-.badge {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 0.8rem;
-    display: block;
-    margin-bottom: 1.5rem;
-}
+/* SEZIONI */
+.section { padding: 100px 5%; }
+.container { max-width: 1100px; margin: auto; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.title { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; color: var(--gold); }
+.image-box img { width: 100%; border-radius: 8px; }
 
-.hero h1 {
-    font-size: clamp(2.5rem, 8vw, 5.5rem);
-    line-height: 1.05;
-    margin-bottom: 1.5rem;
-}
-
-.accent {
-    color: transparent;
-    -webkit-text-stroke: 1px var(--white);
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-}
-
-/* STORY SECTION */
-.section { padding: 120px 0; }
-
-.story-grid {
+/* CONTATTI (RISOLTI) */
+.section-contacts { padding: 80px 5%; background: #0a0a0a; }
+.contact-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-}
-
-.section-title {
-    font-size: 3.2rem;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-}
-
-.quote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.4rem;
-    color: var(--gold);
-    margin-top: 2rem;
-    border-left: 3px solid var(--gold);
-    padding-left: 1.5rem;
-}
-
-.image-wrapper {
-    border-radius: 20px;
+    grid-template-columns: 1fr 1.2fr;
+    background: var(--card-bg);
+    border: 1px solid #222;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-.image-wrapper img {
-    width: 100%;
-    display: block;
-    transition: var(--transition);
+.contact-info { padding: 60px; }
+.contact-info p { margin-bottom: 15px; font-size: 1.1rem; }
+.contact-info i { color: var(--gold); margin-right: 10px; }
+
+.socials { margin: 25px 0; display: flex; gap: 20px; }
+.socials a { color: var(--white); font-size: 1.5rem; transition: 0.3s; }
+.socials a:hover { color: var(--gold); }
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 700;
 }
 
-/* MENU SECTION */
-.menu-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-}
+.contact-map { background: #1a1a1a; min-height: 400px; }
+.map-box img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) invert(1); opacity: 0.6; }
 
-.tab-btn {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.1);
-    color: var(--text-muted);
-    padding: 0.8rem 2.2rem;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: var(--transition);
-}
+footer { text-align: center; padding: 40px; border-top: 1px solid #222; font-size: 0.8rem; color: var(--gray); }
 
-.tab-btn.active {
-    background: var(--gold);
-    color: var(--bg-dark);
-    border-color: var(--gold);
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.menu-item {
-    background: var(--bg-accent);
-    padding: 2.5rem;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    transition: var(--transition);
-    border: 1px solid rgba(255,255,255,0.03);
-}
-
-.menu-item:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold);
-}
-
-.item-info h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
-.item-info p { color: var(--text-muted); font-size: 0.9rem; }
-.price { color: var(--gold); font-weight: 800; font-size: 1.2rem; }
-
-/* SPECIALITA (BANNER) */
-.specialita { padding: 0 5%; margin-bottom: 120px; }
-.spec-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: var(--gold);
-    border-radius: 40px;
-    overflow: hidden;
-    color: var(--bg-dark);
-}
-
-.spec-content { padding: 5rem; display: flex; flex-direction: column; justify-content: center; }
-.spec-content span { text-transform: uppercase; letter-spacing: 3px; font-weight: 700; font-size: 0.8rem; }
-.spec-content h2 { font-size: 3.5rem; margin: 1rem 0; }
-
-/* LOCATION & CONTACTS (FIX MAP) */
-.location-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: var(--bg-accent);
-    border-radius: 40px;
-    overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-}
-
-.info { padding: 5rem; }
-.info h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-.info p { margin-bottom: 1rem; color: var(--text-muted); }
-.info i { color: var(--gold); margin-right: 15px; }
-
-.social-icons { margin-top: 2rem; display: flex; gap: 1.5rem; }
-.social-icons a { color: var(--gold); font-size: 1.8rem; transition: var(--transition); }
-.social-icons a:hover { color: var(--white); transform: scale(1.2); }
-
-.map-placeholder { 
-    background: #1a1a1a; 
-    overflow: hidden; 
-}
-.map-link img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-    transition: var(--transition);
-}
-.map-link:hover img { opacity: 1; }
-
-/* FOOTER */
-footer {
-    padding: 60px 0;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-footer p { color: var(--text-muted); font-size: 0.9rem; }
-footer span { color: var(--gold); font-weight: 600; }
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .story-grid, .spec-card, .location-box { grid-template-columns: 1fr; }
+/* MOBILE */
+@media (max-width: 768px) {
+    .grid, .contact-card { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+    .btn-outline { margin-left: 0; margin-top: 10px; width: 100%; }
+    .btn-gold { width: 100%; }
     .nav-links { display: none; }
-    .hero h1 { font-size: 3.5rem; }
-    .spec-content, .info { padding: 3rem; }
 }
