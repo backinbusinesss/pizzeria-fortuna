@@ -58,3 +58,27 @@ window.addEventListener('scroll', () => {
         nav.style.background = 'rgba(10, 10, 10, 0.8)';
     }
 });
+// Animazione al caricamento
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero-content');
+    hero.style.opacity = '0';
+    hero.style.transform = 'translateY(30px)';
+    
+    setTimeout(() => {
+        hero.style.transition = 'all 1s ease-out';
+        hero.style.opacity = '1';
+        hero.style.transform = 'translateY(0)';
+    }, 300);
+});
+
+// Navbar effect on scroll
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        nav.style.padding = '15px 5%';
+        nav.style.background = 'rgba(5, 5, 5, 0.95)';
+    } else {
+        nav.style.padding = '20px 5%';
+        nav.style.background = 'rgba(5, 5, 5, 0.85)';
+    }
+});
